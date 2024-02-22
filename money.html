@@ -48,82 +48,29 @@
 </head>
 <body>
 
-  <div class="container">
-    <h1>Find the coins by Padmasri</h1>
-    <p>Click on the locations to find coins, beware the monster</p>
-    
-    <div id="locations" class="alert alert-info" role="alert">
-        Number of locations checked is zero.
+    <div class="container">
+        <h1>Find the coins by Padmasri</h1>
+        <p>Click on the locations to find coins, beware the monster</p>
+        
+        <div id="locations" class="alert alert-info" role="alert">
+            Number of locations checked is zero.
+        </div>
+        
+        <div id="score" class="alert alert-info" role="alert">
+            Score is zero.
+        </div>
+        
+        <div id="help" class="alert alert-primary" role="alert">
+            Click for help.
+        </div>
+        
+        <div id="helpReport" class="alert alert-secondary" role="alert" style="display: none;">
+            Help report
+        </div>
+        
+        <button type="button" class="btn btn-primary" onclick="showHelpReport()">Show Help Report</button>
     </div>
     
-    <div id="score" class="alert alert-info" role="alert">
-        Score is zero.
-    </div>
-    
-    <div id="help" class="alert alert-primary" role="alert">
-        Click for help.
-    </div>
-    
-    <div id="helpReport" class="alert alert-secondary" role="alert" style="display: none;">
-        Help report
-    </div>
-    
-    <button type="button" class="btn btn-primary" onclick="showHelpReport()">Show Help Report</button>
-</div>
-<div class="row">
-    <div class="location"><img src="building.jpg" alt="Building"></div>
-    <div class="location"><img src="building.jpg" alt="Building"></div>
-    <div class="location"><img src="building.jpg" alt="Building"></div>
-    <div class="location"><img src="building.jpg" alt="Building"></div>
-    <div class="location"><img src="building.jpg" alt="Building"></div>
-</div>
-<div class="row">
-    <div class="location"><img src="building.jpg" alt="Building"></div>
-    <div class="location"><img src="building.jpg" alt="Building"></div>
-    <div class="location"><img src="building.jpg" alt="Building"></div>
-    <div class="location"><img src="building.jpg" alt="Building"></div>
-    <div class="location"><img src="building.jpg" alt="Building"></div>
-</div>
-<div class="row">
-    <div class="location"><img src="building.jpg" alt="Building"></div>
-    <div class="location"><img src="building.jpg" alt="Building"></div>
-    <div class="location"><img src="building.jpg" alt="Building"></div>
-    <div class="location"><img src="building.jpg" alt="Building"></div>
-    <div class="location"><img src="building.jpg" alt="Building"></div>
-</div>
-<div class="row">
-    <div class="location"><img src="building.jpg" alt="Building"></div>
-    <div class="location"><img src="building.jpg" alt="Building"></div>
-    <div class="location"><img src="building.jpg" alt="Building"></div>
-    <div class="location"><img src="building.jpg" alt="Building"></div>
-    <div class="location"><img src="building.jpg" alt="Building"></div>
-</div>
-<div class="row">
-    <div class="location"><img src="building.jpg" alt="Building"></div>
-    <div class="location"><img src="building.jpg" alt="Building"></div>
-    <div class="location"><img src="building.jpg" alt="Building"></div>
-    <div class="location"><img src="building.jpg" alt="Building"></div>
-    <div class="location"><img src="building.jpg" alt="Building"></div>
-</div>
-<div class="row">
-    <div class="location"><img src="building.jpg" alt="Building"></div>
-    <div class="location"><img src="building.jpg" alt="Building"></div>
-    <div class="location"><img src="building.jpg" alt="Building"></div>
-    <div class="location"><img src="building.jpg" alt="Building"></div>
-    <div class="location"><img src="building.jpg" alt="Building"></div>
-</div>
-<div class="row">
-    <div class="location"><img src="building.jpg" alt="Building"></div>
-    <div class="location"><img src="building.jpg" alt="Building"></div>
-    <div class="location"><img src="building.jpg" alt="Building"></div>
-    <div class="location"><img src="building.jpg" alt="Building"></div>
-    <div class="location"><img src="building.jpg" alt="Building"></div>
-</div>
-  <script>
-function showHelpReport() {
-  var helpReport = document.getElementById("helpReport");
-  helpReport.style.display = "block";
-}
-</script>
-</body>
-</html>
+    </script>
+    </body>
+    </html>
