@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>divlist</title>
+    <style>
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            background-color: red;
+        }
+
+        .flex-container>div {
+            /*div children of the flex container*/
+            background-color: #f1f1f1;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+        }
+
+        /* Responsive layout */
+        @media (max-width: 600px) {
+            .flex-container {
+                flex-direction: column;
+                background-color: green;
+            }
+        }
+    </style>
+</head>
+
+
+
+<body>
+
+    <h1>Padmasri Garikimukku builds list with divs.</h1>
+
+    <input id="input" type="text">
+    <button id="button" onclick="makeNewDiv()">Add end</button>
+    <hr>
+
+    <div class="flex-container" id="target">
+        <div class="divlist">row item 1</div>
+        <div class="divlist">row item 2</div>
+        <div class="divlist">row item 3</div>
+    </div>
+    
+    <script>
+        
+        // function makeNewDiv(){
+        // let element = document.creareElement("div")
+        // element.innerHTML = document.getElementById("input").value;
+        // element.className = "divlist";
+        // doccument.getElementById("target").appendChild(element)
+        // }
+    
+        function makeNewDiv(){
+		/* make the div and its text */
+		let element = document.createElement("div")
+		element.innerHTML = document.getElementById("input").value;
+		element.style.color = "orange"
+
+		/* add it to the container */
+		let container = document.getElementById('target')
+		container.appendChild(element)
+		
+	}
+        
+    </script>
+
+</body>
+
+</html>
