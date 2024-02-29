@@ -1,73 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html> 
+	<head>
+	<style>
+    .flex-container {
+      display: flex;  flex-direction:row;
+      background-color: red;
+  }
 
-<head>
+.flex-container > div {  /*div children of the flex container*/
+  background-color: #f1f1f1; 
+  margin: 10px;  padding: 20px;  font-size: 30px;
+}
 
-    <title>divlist</title>
-    <style>
-        .flex-container {
-            display: flex;
-            flex-direction: row;
-            background-color: red;
-        }
-
-        .flex-container>div {
-            /*div children of the flex container*/
-            background-color: #f1f1f1;
-            margin: 10px;
-            padding: 20px;
-            font-size: 30px;
-        }
-
-        /* Responsive layout */
-        @media (max-width: 600px) {
-            .flex-container {
-                flex-direction: column;
-                background-color: green;
-            }
-        }
-    </style>
+/* Responsive layout */
+@media (max-width: 600px) { 
+	 .flex-container{
+		 flex-direction:column;
+		 background-color: green;
+	  }
+	}
+</style>
+<title>lists</title>
 </head>
-
-
 
 <body>
 
-    <h1>Padmasri Garikimukku builds list with divs.</h1>
+	<h1>Padmasri Garikimukku builds list with divs</h1>
 
-    <input id="input" type="text">
-    <button id="button" onclick="makeNewDiv()">Add end</button>
-    <hr>
+	<input id="newDiv" type="text" name="newDiv">
 
-    <div class="flex-container" id="target">
-        <div class="divlist">row item 1</div>
-        <div class="divlist">row item 2</div>
-        <div class="divlist">row item 3</div>
-    </div>
-    
-    <script>
-        
-        // function makeNewDiv(){
-        // let element = document.creareElement("div")
-        // element.innerHTML = document.getElementById("input").value;
-        // element.className = "divlist";
-        // doccument.getElementById("target").appendChild(element)
-        // }
-    
-        function makeNewDiv(){
+		<div class="flex-container" id="target">
+		  <div class="divlist">row item 1</div>   
+		  <div class="divlist">row item 2</div>  
+		  <div class="divlist">row item 3</div>  
+		</div>
+	
+	<p> Press the button to create an new element of type div and then add it to the container.
+		</p>
+		<button onclick="makeNewDiv()">Add end</button>
+		<button onclick="addFront()">Add front</button>
+		<button onclick="remove()">Remove</button>
+	
+	
+</body>
+<script>
+	function makeNewDiv(){
 		/* make the div and its text */
 		let element = document.createElement("div")
-		element.innerHTML = document.getElementById("input").value;
-		element.style.color = "orange"
-
+		let text = document.getElementById("newDiv").value
+		element.innerHTML = text
+		element.className = "divlist"
 		/* add it to the container */
-		let container = document.getElementById('target')
+		let container = document.getElementById("target")
 		container.appendChild(element)
 		
 	}
-        
-    </script>
-
-</body>
-
+	function addFront()
+	{
+		/* make the div and its text */
+		let element = document.createElement("div")
+		let text = document.getElementById("newDiv").value
+		element.innerHTML = text
+		element.className = "divlist"
+		/* add it to the container */
+		let container = document.getElementById("target")
+		container.insertBefore(element, container.firstChild)
+	}
+	function remove(){
+		var divListItems = document.getElementsByClassName("divlist")
+		var lengthList = divListItems.length
+		console.log(divListItems)
+		if(lengthList > 0)
+		{
+			divListItems[Math.floor(lengthList/2)].remove()
+		}
+	}
+</script>
 </html>
